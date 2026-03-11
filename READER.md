@@ -135,16 +135,16 @@ The plugin supports variable substitution in templates using the following synta
 
 ## Testing
 
-The project includes a test server for previewing ANX components:
+The project includes a demo server for previewing ANX components:
 
-1. Start the test server:
+1. Start the demo server:
    ```bash
    npm start
    ```
 
 2. Open your browser and navigate to `http://localhost:3000`
 
-3. Modify the `test/test.md` file to test different ANX components
+3. Modify the `examples/demo.md` file to test different ANX components
 
 4. Refresh the browser to see changes (no server restart required)
 
@@ -152,13 +152,17 @@ The project includes a test server for previewing ANX components:
 
 ```
 markdown-it-anx/
-├── index.js          # Main plugin implementation
-├── package.json      # Project configuration
+├── src/              # Source code
+│   └── index.js      # Main plugin implementation
+├── dist/             # Build output
+│   ├── index.cjs     # CommonJS format
+│   └── index.mjs     # ES module format
+├── examples/         # Example files
+│   ├── demo.js       # Demo server
+│   └── demo.md       # Demo markdown file
 ├── READER.md         # This documentation
-└── test/
-    ├── server.js     # Test server
-    ├── test.js       # Test script
-    └── test.md       # Test markdown file
+├── package.json      # Project configuration
+└── rollup.config.js  # Build configuration
 ```
 
 ## API Reference
@@ -297,16 +301,16 @@ console.log(html);
 
 ## 测试
 
-项目包含一个测试服务器，用于预览 ANX 组件：
+项目包含一个演示服务器，用于预览 ANX 组件：
 
-1. 启动测试服务器：
+1. 启动演示服务器：
    ```bash
    npm start
    ```
 
 2. 打开浏览器并导航到 `http://localhost:3000`
 
-3. 修改 `test/test.md` 文件来测试不同的 ANX 组件
+3. 修改 `examples/demo.md` 文件来测试不同的 ANX 组件
 
 4. 刷新浏览器查看更改（无需重启服务器）
 
@@ -314,13 +318,17 @@ console.log(html);
 
 ```
 markdown-it-anx/
-├── index.js          # 主要插件实现
-├── package.json      # 项目配置
+├── src/              # 源码
+│   └── index.js      # 主要插件实现
+├── dist/             # 构建输出
+│   ├── index.cjs     # CommonJS 格式
+│   └── index.mjs     # ES 模块格式
+├── examples/         # 示例文件
+│   ├── demo.js       # 演示服务器
+│   └── demo.md       # 演示 markdown 文件
 ├── READER.md         # 本文档
-└── test/
-    ├── server.js     # 测试服务器
-    ├── test.js       # 测试脚本
-    └── test.md       # 测试 markdown 文件
+├── package.json      # 项目配置
+└── rollup.config.js  # 构建配置
 ```
 
 ## 许可证

@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const markdownIt = require('markdown-it');
-const markdownItAnx = require('../index');
+const markdownItAnx = require('../src/index');
 
 const app = express();
 const port = 3000;
@@ -11,7 +11,7 @@ const md = markdownIt().use(markdownItAnx);
 
 app.get('/', (req, res) => {
   try {
-    const testMarkdownPath = path.join(__dirname, 'test.md');
+    const testMarkdownPath = path.join(__dirname, 'demo.md');
     const testMarkdown = fs.readFileSync(testMarkdownPath, 'utf8');
     const html = md.render(testMarkdown);
   
