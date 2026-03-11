@@ -1,0 +1,23 @@
+{
+  "name": "markdown-it-anx",
+  "version": "1.0.0",
+  "description": "Markdown-it plugin for ANX rules",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "start": "node test/server.js"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "express": "^4.19.2"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown-it-plugin",
+    "anx"
+  ],
+  "author": "",
+  "license": "MIT"
+}
